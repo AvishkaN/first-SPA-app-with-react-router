@@ -1,5 +1,21 @@
+import {useHistory} from 'react-router-dom';
+import QuatForm from '../Components/quotes/QuoteForm';
+
+
 const NewQuote = () => {
-  return <h1>New Quote Page</h1>
+  const history=useHistory();
+
+ const onAddQuote=(details)=>{
+ 
+   console.log(details);
+
+   history.push('/quotes');
+ };
+
+  return <>
+  <h1>Add new quatos</h1>
+  <QuatForm onAddQuote={onAddQuote}/>
+  </>
 };
 
 export default NewQuote;
