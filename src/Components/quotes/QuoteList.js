@@ -29,8 +29,16 @@ const QuoteList = (props) => {
   const sortingHandler=()=>{
     console.log(`sorting`);
     
-    history.push(`/quotes?sort=${isSoartingAscending ? 'desc' :'asc'}`);
-    console.log(location);
+    console.log(location.pathname);
+
+    // object type
+    // history.push({
+    //   pathname:location.pathname,
+    //   search:`?sort=${isSoartingAscending ? 'desc' :'asc'}`
+    // });
+
+    // normal way
+    history.push(`${location.pathname}?sort=${isSoartingAscending ? 'desc' :'asc'}`);
 
 
   }
