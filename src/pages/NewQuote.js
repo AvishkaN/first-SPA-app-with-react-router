@@ -8,7 +8,7 @@ const NewQuote = () => {
  const onAddQuote=(details)=>{
  
    console.log(details);
-
+   
    history.push('/quotes');
  };
 
